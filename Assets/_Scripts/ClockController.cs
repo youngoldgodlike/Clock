@@ -32,7 +32,7 @@ public class ClockController : MonoBehaviour
    private void Awake()
    {
       _useTimeEditButton.onClick.AddListener(UseTimeChangeMode);
-      _confirmTimeButton.onClick.AddListener(ExitExitTimeChangeModeAndSave);
+      _confirmTimeButton.onClick.AddListener(ExitTimeChangeModeAndSave);
       
       _analogClock = new AnalogClock(_hourHand, _minuteHand, _secondHand);
       _keyboardTimeEdit = new KeyboardTimeEdit(_hoursField, _minutesField);
@@ -67,7 +67,7 @@ public class ClockController : MonoBehaviour
    }
 
 
-   private void ExitExitTimeChangeModeAndSave()
+   private void ExitTimeChangeModeAndSave()
    {
       StartClock(_changeTimeData);
       ExitTimeChangeMode();
